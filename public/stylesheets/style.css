@@ -42,6 +42,9 @@ hr{
     margin: 10px 0;
     border-color: #ccc;
 }
+br{
+    margin: 10px 0;
+}
 
 @media screen and (max-width: 640px){
     .page{
