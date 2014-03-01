@@ -1,0 +1,17 @@
+<p><img src="{{task_info.user.head}}" alt=""/><a href="/tasks/{{task_info.user._id}}/list">{{task_info.user.name}}</a></p>
+<h1>{{task_info.title}} {{#if userIsMy}}<a href="/task/edit/{{task_info._id}}">编辑</a>{{/if}}</h1>
+<p>状态：{{task_info.stat_cn}}  时间：{{task_info.time.day}}  类别：
+    {{#each task_info.kinds}}
+    {{name}}({{point}})
+    {{/each}}</p>
+<div>{{task_info.content}}</div>
+{{#if userIsMy}}
+<p>
+    {{#if task_info.stat}}
+    <a href="/task/one/{{task_info._id}}/stat/0">标记为未做</a>
+    {{else}}
+    <a href="/task/one/{{task_info._id}}/stat/1">标记为已做</a>
+    {{/if}}
+</p>
+{{/if}}
+

@@ -1,0 +1,9 @@
+
+<ul>
+    {{#each users_info}}
+    <li>
+        --<a href="/user/info/{{_id }}">{{name}}</a>
+        --<a href="/tasks/{{_id}}/list"  title="查看该用户的任务列表">列表</a>
+    </li>
+    {{/each}}
+</ul>

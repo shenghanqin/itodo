@@ -1,0 +1,27 @@
+<header>
+    <h1>{{title}}</h1>
+    {{#if user}}
+    <p>{{user.name}}  --- <a href="/task/{{user._id}}/new">新任务</a></p>
+    {{/if}}
+</header>
+
+<nav>
+    <span><a title="主页" href="/">home</a></span>
+    {{#if user}}
+
+    <span><a title="所有用户" href="/users-list">users</a></span>
+    <span><a title="所有类型" href="/kinds-list">kinds</a></span>
+    <span><a title="登出" href="/logout">logout</a></span>
+    {{else}}
+    <span><a title="登录" href="/login">login</a></span>
+    <span><a title="注册" href="/reg">register</a></span>
+    {{/ if}}
+
+</nav>
+
+{{# if success }}
+<div class="success">{{ success }}</div>
+{{/if  }}
+{{# if success }}
+<div class="error">{{error }}</div>
+{{/if  }}

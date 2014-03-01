@@ -1,0 +1,10 @@
+
+<form method="post">
+    <input type="hidden" value="{{user_info._id}}"/>
+    用户：<br />
+    <input type="text" name="title" value="{{user_info.name}}" disabled="disabled" /><br />
+
+    邮箱：<br />
+    <input type="email" name="email" value="{{user_info.email}}" /><br />
+    <input type="submit" value="保存修改" />
+</form>

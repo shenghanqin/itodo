@@ -1,0 +1,24 @@
+<form method="post">
+    <input type="hidden" name="stat" value="{{task_info.stat}}" />
+    <input type="hidden" name="user" value="{{task_info.user._id}}"/>
+    <input type="hidden" name="tid" value="{{task_info._id}}"/>
+    标题：<br />
+
+    <input type="text" name="title" value="{{task_info.title}}" /><br />
+
+    类型：<br />
+    {{#each kinds_info }}
+        {{#if isSelect}}
+        <label for="{{_id}}"><input type="checkbox" value="{{_id}}" name="kinds" id="{{_id}}"  checked/>{{name}} - {{point}}点 </label>
+        {{else}}
+        <label for="{{_id}}"><input type="checkbox" value="{{_id}}" name="kinds" id="{{_id}}"  />{{name}} - {{point}}点 </label>
+        {{/if}}
+    {{/each }}
+
+    <br/>
+
+    任务内容：<br />
+    <textarea name="content" id="" cols="30" rows="10">{{task_info.content}}</textarea>
+    <br/>
+    <input type="submit" value="保存修改" />
+</form>

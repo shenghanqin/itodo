@@ -1,0 +1,21 @@
+<form method="post">
+    标题：<br />
+    <input type="text" name="title" /><br />
+    <!--状态：<br />-->
+    <input type="hidden" name="stat" value="0" />
+    <!--<select name="stat" id="" disabled="disabled">-->
+        <!--<option value="0" selected>未做</option>-->
+        <!--<option value="1">已做</option>-->
+    <!--</select><br />-->
+    类型：<br />
+    {{#each kinds_info }}
+    <label for="{{_id}}"><input type="checkbox" value="{{_id}}" name="kinds" id="{{_id}}"/>{{name}} - {{point}}点 </label>
+    {{/each }}
+
+    <br/>
+
+    任务内容：<br />
+    <textarea name="content" id="" cols="30" rows="10"></textarea>
+    <br/>
+    <input type="submit" value="保存修改" />
+</form>

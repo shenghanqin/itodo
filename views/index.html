@@ -1,0 +1,19 @@
+<ul>
+    {{#each tasks_info}}
+    <li>
+        <h3><a href="/task/one/{{_id}}">{{title}}</a></h3>
+        <p>
+            用户：<img src="{{user.head}}" alt="用户头像"/>
+            <a href="/tasks/{{user._id}}/list">{{user.name}}</a>
+            --状态：{{stat}}
+            --类型
+            {{#each kinds}}
+            {{name}}（{{point}}点）
+            {{/each }}
+
+        </p>
+
+    </li>
+    {{/each}}
+</ul>
+

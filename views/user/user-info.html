@@ -1,0 +1,8 @@
+<p>现在用户：{{user_info.name}}</p>
+<p>用户头像：<img src="{{user_info.head}}" alt="用户头像"/></p>
+<p>用户邮箱：{{user_info.email}}</p>
+<p><a href="/tasks/{{user_info._id}}/list">查看任务</a></p>
+<p><br/></p>
+{{#if user.isUserMy}}
+<p><a href="/user/edit/{{user_info._id}}">修改用户信息</a>&nbsp;&nbsp;<a href="/user/password/{{user_info._id}}">修改用户密码</a></p>
+{{/if}}

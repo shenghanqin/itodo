@@ -1,0 +1,11 @@
+<br />
+<div>已经有 {{t_total}} 个任务,现在是第 {{t_page}} 页</div>
+<div>
+    {{#if !isTFirstPage}}
+    <span class="prepage"><a title="上一页" href="?t_p={{t_page-1}}">上一页</a></span>
+    {{/if}}
+
+    {{#if isTLastPage}}
+    <span class="nextpage"><a title="下一页" href="?t_p={{t_page+1}}">下一页</a></span>
+    {{/if}}
+</div>

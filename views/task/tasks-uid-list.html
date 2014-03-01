@@ -1,0 +1,27 @@
+<h2><img src="{{user_info.head}}" alt="用户头像"/> <a href="/user/info/{{user_info._id}}">{{user_info.name}}</a></h2>
+<hr/>
+
+<ul>
+    {{#each tasks_info}}
+    <li>
+        <h3>标题： <a href="/task/one/{{_id}}">{{title}}</a></h3>
+        <p>状态：{{stat}}
+            ---种类：
+            {{#each kinds}}
+            {{name}}({{point}})
+            {{/each}}
+        </p>
+    </li>
+    {{/each }}
+</ul>
+<br />
+<div>已经有 {{t_total}} 个任务,现在是第 {{t_page}} 页</div>
+<div>
+    {{#unless isTFirstPage}}
+    <span class="prepage"><a title="上一页" href="?t_p={{t_page}}">上一页</a></span>
+    {{/unless}}
+
+    {{#if isTLastPage}}
+    <span class="nextpage"><a title="下一页" href="?t_p={{t_page}}">下一页</a></span>
+    {{/if}}
+</div>

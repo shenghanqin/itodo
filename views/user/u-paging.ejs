@@ -1,0 +1,11 @@
+<br />
+<div>已经有<%= u_total %>个用户,现在是第<%= u_page %>页</div>
+<div>
+    <% if (!isUFirstPage) { %>
+    <span class="prepage"><a title="上一页" href="?u_p=<%= u_page-1 %>">上一页</a></span>
+    <% } %>
+
+    <% if (!isULastPage) { %>
+    <span class="nextpage"><a title="下一页" href="?u_p=<%= u_page+1 %>">下一页</a></span>
+    <% } %>
+</div>
